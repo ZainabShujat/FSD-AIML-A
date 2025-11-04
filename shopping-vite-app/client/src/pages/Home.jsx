@@ -1,15 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Home = () => {
-  return (
-    <div className="home-container">
-      <h1>Welcome to ShopCart</h1>
-      <div className="hero-section">
-        <h2>Find the Best Deals</h2>
-        <p>Browse through our collection of amazing products</p>
-      </div>
+const Home = () => (
+  <div className="home-container">
+    <h1>Welcome to ShopCart</h1>
+    <p>Classic shopping cart demo — browse products and add them to your cart.</p>
+    <div style={{marginTop:16}}>
+      <Link to="/products" className="btn">View Products</Link>
     </div>
-  );
-};
+  </div>
+);
 
 export default Home;

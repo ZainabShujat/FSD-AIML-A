@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
 
-const Header = ({ isLoggedIn, onLogout }) => {
+const Header = ({ cartCount = 0 }) => {
   return (
     <header className="header">
       <div className="header-content">
@@ -15,14 +15,7 @@ const Header = ({ isLoggedIn, onLogout }) => {
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/products">Products</Link></li>
-            <li><Link to="/cart">Cart</Link></li>
-            {isLoggedIn && (
-              <li>
-                <button className="logout-btn" onClick={onLogout}>
-                  Logout
-                </button>
-              </li>
-            )}
+            <li><Link to="/cart">Cart {cartCount > 0 && <span className="badge">{cartCount}</span>}</Link></li>
           </ul>
         </nav>
       </div>
