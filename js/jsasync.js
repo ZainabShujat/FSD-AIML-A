@@ -18,6 +18,7 @@ function getData(token) {
     });
 }
 
+
 // Simulate async calculation
 function calculateData(data) {
     return new Promise((resolve) => {
