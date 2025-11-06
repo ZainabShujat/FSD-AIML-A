@@ -77,7 +77,7 @@ const Cart = () => {
   const filteredItems = cartItems.filter(item =>
     item.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
-
+//sorted items
   const sortedItems = [...filteredItems].sort((a, b) => {
     if (sortBy === 'price') return a.price - b.price;
     if (sortBy === 'name') return a.name.localeCompare(b.name);
