@@ -8,7 +8,7 @@ const Cart = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('name');
   const [checkoutForm, setCheckoutForm] = useState({});
-
+//mock payment processing function
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -19,7 +19,7 @@ const Cart = () => {
             'Content-Type': 'application/json'
           }
         });
-
+//error handling
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
